@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package poetry;
+
+service GeneratePoetry {
+	rpc GeneratePoetry(Seed) returns(Poetry);
+}
+
+message Seed {
+	string Text = 1;
+}
+
+message Poetry {
+	string Text = 1;
+}
